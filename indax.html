@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightcoral;
+            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        img {
+            position: relative;
+            max-width: 100% ;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #message-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-items: center;
+            display: none;
+            max-width: 90%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            z-index: 2; /* Ensure the message box is above the image */
+        }
+        #show-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            z-index: 1; /* Ensure the button is below the message box */
+        }
+        @media screen and (max-width: 600px) {
+            /* Adjust styles for screens with a maximum width of 600px (typical for phones) */
+            img {
+                width: 100%; /* Make the image fill the width of its container */
+            }
+    
+            #message-box {
+                max-width: 90%; /* Adjust the maximum width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    
+        <img src="Untitled design (1).png" alt="">
+    
+        <button id="show-button" onclick="showMessages()">Click Me</button>
+
+        <div id="message-box" >
+            <p>Hey [Friend's Name],</p>
+
+            <p>I just wanted to take a moment to let you know how much you mean to me. You are an amazing friend, and I am grateful to have you in my life. Through thick and thin, you've always been there for me, and I appreciate your friendship more than words can express.</p>
+
+            <p>Thank you for the laughter, the support, and the countless memories we've shared. Here's to many more adventures and moments of joy together!</p>
+
+            <p>Best friends forever!</p>
+        </div>    
+
+
+
+
+
+    <script>
+        function showMessages() {
+            var messageBox = document.getElementById('message-box');
+            var showButton = document.getElementById('show-button');
+
+            messageBox.style.display = 'block';
+            showButton.style.display = 'none';
+        }
+    </script>
+</html>
